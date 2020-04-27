@@ -6,6 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 @Controller
 @ResponseBody
 /**
@@ -17,11 +21,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
-public class MailController {
+public class MailHttpController {
     @Autowired
     private MailServiceImpl mailServiceImpl;
     @RequestMapping(value = "send_email")
     public String sendEmail(String to, String name, String code) {
+        Map map = new LinkedHashMap();
        try {
            mailServiceImpl.sendSimpleMail(to,name,code);
        }catch (Exception e){

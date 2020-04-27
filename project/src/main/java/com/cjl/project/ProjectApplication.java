@@ -1,4 +1,4 @@
-package com.cjl.activemq;
+package com.cjl.project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,8 @@ import org.springframework.jms.annotation.EnableJms;
 
 @EnableJms
 @SpringBootApplication
-public class ActivemqApplication {
-
+public class ProjectApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ActivemqApplication.class, args);
+        SpringApplication.run(ProjectApplication.class, args);
     }
-
 }

@@ -1,4 +1,4 @@
-package com.cjl.activemq.controller;
+package com.cjl.project.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +18,9 @@ public class ProviderController {
     @Autowired
     private JmsMessagingTemplate jmsMessagingTemplate;
     @RequestMapping("send")
-    public void send(String name) {
+    public void send(String txt) {
         //方法一：添加消息到消息队列
-        jmsMessagingTemplate.convertAndSend(queue , name);
+        jmsMessagingTemplate.convertAndSend(queue , txt);
         //方法二：这种方式不需要手动创建queue，系统会自行创建名为test的队列
         //jmsMessagingTemplate.convertAndSend("test", name);
     }

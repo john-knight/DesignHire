@@ -1,10 +1,10 @@
-package com.cjl.activemq;
+package com.cjl.project;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ActivemqApplicationTests {
+class ProjectApplicationTests {
 
     @Test
     void contextLoads() {
